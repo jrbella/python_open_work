@@ -1,10 +1,3 @@
-"""
-Author: Jeff Bella
-Summary:
-    Building out an auction house application for testing purposes
-
-"""
-
 class Art:
   def __init__(self, artist, title, medium, year):
     self.artist = artist
@@ -44,6 +37,7 @@ class Client:
 #declared variables
 veneer = Marketplace([])
 edytta = Client(name = "Edytta Halpirt", location = "unknown", is_museum = False )
+moma = Client(name = "The MOMA", location = "New York", is_museum = True)
 
 #Testing
 my_stuff = Marketplace(["one", "two"])
@@ -60,3 +54,5 @@ print(my_stuff.show_listings)
 print(veneer)
 #test edytta
 print(edytta)
+#test moma
+print(moma)
