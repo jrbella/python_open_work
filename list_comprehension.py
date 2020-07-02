@@ -20,3 +20,11 @@ def foo(lst):
 #quick test
 temperatures = foo([99, 'no data', 95, 94, 'no data'])
 print(temperatures)
+
+#force a list of str to float 
+def sum_foo(lst):
+    return sum([float(i) for i in lst])
+
+#quick test
+temper = sum_foo(['1.2', '1.3', '5.55'])
+print(temper)
