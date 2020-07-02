@@ -47,3 +47,12 @@ def alphabetize_list(*args):
 #quick test
 
 print(alphabetize_list("twinkle","twinkle","little", "star"))
+
+#kwargs (key word arguments)
+
+def mean(**kwargs):
+    return kwargs
+
+#quick test
+
+print(mean(a=1, b=2, c=3))
