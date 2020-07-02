@@ -27,3 +27,23 @@ print(area_2(4.1, 5.1)) #should be 20.909...
 print(area_2("4.1", "5.1")) #shoudl be 20.909..
 print(area_2("this should fail", "this should fail")) #should throw
 
+
+#indefinate paramters
+
+def average_basic(*args):
+    return (sum(args)/len(args))
+
+
+#quick test
+print(average_basic(1,2,3,4,5,6,7))
+
+#sorting strings alphabetically
+
+def alphabetize_list(*args):
+    #converting the tuple to a list for processing
+    args = [i.upper() for i in args]
+    return sorted(args)
+
+#quick test
+
+print(alphabetize_list("twinkle","twinkle","little", "star"))
