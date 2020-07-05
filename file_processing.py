@@ -23,11 +23,11 @@ print(content_2)
 
 #writing data to file
 #could add user input to add vegatables to file later use input etc
-with open("%s/files/vegatables.txt" % (here), "w") as myfile:
+with open("%s/files/vegetables.txt" % (here), "w") as myfile:
     myfile.write("Tomato\nCucumber\nOnion\n")
 
 #retrieving vegatables
-with open("%s/files/vegatables.txt" % (here)) as myfile:
+with open("%s/files/vegetables.txt" % (here)) as myfile:
     content_3 = myfile.read()
 
 print(content_3)
