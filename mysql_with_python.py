@@ -16,6 +16,7 @@ con = mysql.connector.connect(
     password = "some_crazy_password", #Pass authentication
     host = "some_crazy_ip_address", #Put ip here
     database = "some_crazy_database" #put db name here
+    #Should fail on line 18 not a real database
 )
 
 cursor = con.cursor()
