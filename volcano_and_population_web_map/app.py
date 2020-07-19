@@ -5,10 +5,6 @@ import os
 #Create Map Object
 map = folium.Map(location=[38.58, -99.09], zoom_start=6, tiles = "Stamen Terrain")
 
-#Feature Group
-
-
-
 #importing variables to work on Windows
 here = os.path.dirname(os.path.abspath(__file__))
 #Volcanoe Data as CSV
@@ -22,9 +18,7 @@ lon = list(volcano_data["LON"])
 elev = list(volcano_data["ELEV"])
 name = list(volcano_data["NAME"])
 
-
 #short function to determine color for elevation
-
 def marker_color(elevation):
     if elevation < 1500:
         return "green"
@@ -53,7 +47,6 @@ for lt, ln, el, nm in zip(lat, lon, elev, name):
             fill_opacity=0.7
         )
     )
-
 
 #population feature group
 fgp = folium.FeatureGroup(name="Population")
