@@ -36,7 +36,7 @@ fgv = folium.FeatureGroup(name="Volcanoes")
 
 for lt, ln, el, nm in zip(lat, lon, elev, name):
     # format marker here
-    coordinate_string = " %s, (Elevation: %s meters), coordinates(%s, %s)" % (
+    coordinate_string = "%s, elevation:%s, lat:%s, long:%s" % (
         str(nm),
         str(el),
         str(lt),
@@ -45,13 +45,10 @@ for lt, ln, el, nm in zip(lat, lon, elev, name):
 
     # formating for readability
     fgv.add_child(
-        folium.CircleMarker(
+        folium.Marker(
             location=[lt, ln],
-            radius=6,
             popup=coordinate_string,
-            fill_color=marker_color(el),
-            color="grey",
-            fill_opacity=0.7,
+            icon=folium.Icon(color=marker_color(el))
         )
     )
 
