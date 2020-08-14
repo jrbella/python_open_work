@@ -4,7 +4,7 @@ from blossom_lib import flower_definitions
 class HashMap:
   def __init__(self, size):
     self.array_size = size
-    self.array_size = [LinkedList() for number in range(size)]
+    self.array = [LinkedList() for number in range(size)]
 
   def hash(self,key):
     return sum(key.encode())
@@ -20,7 +20,7 @@ class HashMap:
       if key == item[0]:
         item[1] = value
         return 
-    list_at_array.insert(playload)
+    list_at_array.insert(payload)
   
   def retrieve(self, key):
     array_index = self.compress(self.hash(key))
