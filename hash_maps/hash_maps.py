@@ -67,13 +67,10 @@ class HashMap:
       if possible_return_value[0] == key:
         return possible_return_value[1]
 
-      number_collisions += 1
+      retrieval_collisions += 1
 
     return
 
-
-"""
-Tests
 
 hash_map = HashMap(22)
 hash_map.assign('gabbro', 'igneous')
@@ -81,5 +78,3 @@ hash_map.assign('sandstone', 'sedimentary')
 hash_map.assign('gneiss', 'metamorphic')
 
 print(hash_map.retrieve('gabbro'), hash_map.retrieve('sandstone'), hash_map.retrieve('gneiss'))
-
-"""
