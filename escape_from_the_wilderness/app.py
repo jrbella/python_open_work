@@ -1,6 +1,4 @@
-######
-# TREENODE CLASS
-######
+#TreeNode class
 class TreeNode:
 
   def __init__(self, story_piece):
@@ -24,9 +22,7 @@ class TreeNode:
         print(chosen_child.story_piece)
         story_node = chosen_child
   
-######
-# VARIABLES FOR TREE
-######
+#variables
 
 story_root = TreeNode("""
 You are in a forest clearing. There is a path to the left.
